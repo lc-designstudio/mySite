@@ -101,10 +101,9 @@ html {
 
 body {
 		font-family: 'Open Sans', sans-serif;
-		font-size: 1em;
+		font-size: .875em;
 		line-height: 1.5;
 	}
-
 
 h2 {
 		margin-bottom: 50px;
@@ -115,10 +114,15 @@ h2, h3 {
 		font-family: 'Poppins', sans-serif;
 }
 
+h4 {
+  width: 100%;
+}
+
 figure {
 		display: flex;
 		align-items: center;
 		margin: 0;
+    border: 1px solid #282828;
 	}
 
 img {
@@ -162,10 +166,12 @@ ul {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		margin: 20px 0;
-		border-bottom: 1px solid black;
 	}
 
+.skills-column, .about-column {
+		border-bottom: 1px solid black;
+    margin: 20px 0;
+}
 
 #section-one, #section-three {
 		background: #eff5f5;
@@ -178,6 +184,7 @@ ul {
 #skills-wrapper, #about-wrapper, #portfolio-wrapper {
 		margin: 75px 0;
 }
+
 /* -------------------- Header/Footer base styles -------------------- */
 #header, footer {
 		background: #282828;
@@ -193,16 +200,17 @@ ul {
 #hero-area {
 		background: url("../img/hero-4.jpg") center bottom no-repeat;
 		background-size: cover;
-		color: #282828;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-  min-height: 400px;
+  min-height: 500px;
+		color: #282828;
 }
 
-#hero-wrapper {
-		margin-bottom: 100px;
+
+#hero-area span {
+		color: indianred;
 }
 
 #navbar  {
@@ -213,11 +221,12 @@ ul {
 }
 
 #navbar ul {
-		display: flex;
+	display: flex;
   align-items: center;
   width: 90%;
   justify-content: space-around;
-		text-transform: uppercase;
+	text-transform: uppercase;
+  padding: 0;
 }
 
 #navbar a {
@@ -271,12 +280,16 @@ ul {
 
 /* -------------------- Section One -------------------- */
 
-
 .skills-column i {
 		margin-right: 10px;
 		color: indianred;
+		font-size: 1.33em;
 }
 
+.skills-column span {
+    color: #282828;
+    font-weight: bold;
+}
 .skills-fontawesome {
 		margin: 0;
 }
@@ -296,34 +309,45 @@ ul {
 
 
 /* -------------------- Section Two -------------------- */
+/* <! -- <a href='https://www.freepik.com/psd/mockup'>Mockup psd created by customscene - www.freepik.com</a>*/
+
 .about-column span {
-		font-weight: bold;
-		color: indianred;
+    color: indianred;
+    font-weight: bold;
 }
 
+#about-col1 a {
+		color: #000;
+}
 /* -------------------- Section Three -------------------- */
-.portfolio-column {
-		align-items: center;
-		background: #fff;
-		justify-content: space-between;
-		margin-bottom: 50px;
-		border: 1px solid black;
+#section-three {
+  margin: 0;
 }
 
-.portfolio-figure {
-		border-bottom: 1px solid black; 
+.portfolio-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-flow: row wrap;
+		width: 100%;
+}
 
+.portfolio-column {
+  padding-bottom: 50px;
+  margin: 20px 0;
+}
+.portfolio-column h4 {
+    margin-bottom: 5px;
 }
 
 .portfolio-column h4 a {
 		color: indianred;
 }
+
 .portfolio-column p {
-		width: 100%;
+				width: 100%;
+        margin-top: 0;
 }
-
-
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -407,7 +431,8 @@ ul {
 
 		/* Base Styles */
 		.content-wrapper {
-			max-width: 1024px;
+			max-width: 1000px;
+      margin: 100px 0;
 		}
 
 
@@ -438,6 +463,21 @@ ul {
 			width: 100%;
 	}
 
+/* Portfolio section */
+  #portfolio-row {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .portfolio-column {
+      width: 40%;
+      margin-top: 0;
+      padding-bottom: 50px;
+  }
+
+  .portfolio-column .content-wrapper {
+      margin: 0; 
+  }
 }
 
 @media all and (min-width:1025px) {
@@ -467,7 +507,7 @@ ul {
 }
 
 .portfolio-column {
-		width: 40%;
+		width: 45%;
 		margin-bottom: 50px;
 }
 
@@ -478,7 +518,7 @@ ul {
 }
 
 
-
+}
 
 
 @media print,
