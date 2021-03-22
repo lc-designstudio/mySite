@@ -103,6 +103,11 @@ body {
 		font-family: 'Open Sans', sans-serif;
 		font-size: 1em;
 		line-height: 1.5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 	}
 
 
@@ -113,6 +118,10 @@ h2 {
 
 h2, h3 {
 		font-family: 'Poppins', sans-serif;
+}
+
+h4 {
+  width: 100%;
 }
 
 figure {
@@ -156,6 +165,7 @@ ul {
 		justify-content: center;
 		align-items: center;
 		flex-flow: row wrap;
+    width: 100%;
 }
 
 .hero-area, .skills-column, .about-column, .portfolio-column {
@@ -163,9 +173,12 @@ ul {
 		flex-direction: column;
 		width: 100%;
 		margin: 20px 0;
-		border-bottom: 1px solid black;
 	}
 
+hr.divider {
+  width: 90%;
+  border-top: 1px solid black;
+  }
 
 #section-one, #section-three {
 		background: #eff5f5;
@@ -198,26 +211,31 @@ ul {
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-  min-height: 400px;
+    min-height: 400px;
 }
 
 #hero-wrapper {
-		margin-bottom: 100px;
+	margin-bottom: 100px;
+}
+
+#hero-wrapper span {
+  color: indianred;
 }
 
 #navbar  {
-		background: #282828;
+	background: #282828;
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
 #navbar ul {
-		display: flex;
+	display: flex;
   align-items: center;
   width: 90%;
   justify-content: space-around;
-		text-transform: uppercase;
+	text-transform: uppercase;
+  padding: 0;
 }
 
 #navbar a {
@@ -266,12 +284,10 @@ ul {
 }
 .footer-fontawesome i {
 		color: darksalmon;
+    font-size: 1.5em;
 }
 
-
 /* -------------------- Section One -------------------- */
-
-
 .skills-column i {
 		margin-right: 10px;
 		color: indianred;
@@ -294,7 +310,6 @@ ul {
 		padding: 0 10px;
 }
 
-
 /* -------------------- Section Two -------------------- */
 .about-column span {
 		font-weight: bold;
@@ -304,25 +319,30 @@ ul {
 /* -------------------- Section Three -------------------- */
 .portfolio-column {
 		align-items: center;
-		background: #fff;
 		justify-content: space-between;
-		margin-bottom: 50px;
-		border: 1px solid black;
+		padding-bottom: 50px;
 }
 
-.portfolio-figure {
-		border-bottom: 1px solid black; 
+.portfolio-column .content-wrapper {
+    width: 100%;
+}
 
+.portfolio-column h4 {
+		margin-bottom: 5px;
 }
 
 .portfolio-column h4 a {
 		color: indianred;
 }
+
 .portfolio-column p {
 		width: 100%;
+    margin: 0;
 }
 
-
+#section-three hr.divider {
+    margin-bottom: 30px;
+}
 
 /* ==========================================================================
    Helper classes
@@ -403,13 +423,15 @@ ul {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-		@media all and (min-width:769px)  {
-
+		@media all and (min-width:768px)  {
 		/* Base Styles */
 		.content-wrapper {
 			max-width: 1024px;
 		}
 
+    hr.divider {
+        display: none;
+    }
 
 		 .skills-column, .about-column {
 				width: 30%;
@@ -422,7 +444,6 @@ ul {
 			}
 
 		/* Header */
-
 		#header-wrapper {
 				justify-content: space-between;
 				padding: 20px 0;
@@ -433,11 +454,19 @@ ul {
 			min-height: 600px;
 	}
 
-	/* Skills section */
+	/* Section one */
 	.skills-fontawesome {
 			width: 100%;
 	}
 
+/* Section-three */
+  #portfolio-row {
+    justify-content: space-between;
+  }
+
+ .portfolio-column {
+      width: 40%;
+    }
 }
 
 @media all and (min-width:1025px) {
@@ -455,7 +484,6 @@ ul {
 		margin: 20px 0;
 }
 
-
 #skills-row, #about-row {
 		justify-content: space-between;
 }
@@ -472,15 +500,9 @@ ul {
 }
 
 }
-
 @media all and (min-width:1201px) {
 
 }
-
-
-
-
-
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),
