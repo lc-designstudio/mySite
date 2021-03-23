@@ -127,7 +127,6 @@ figure {
 		display: flex;
 		align-items: center;
 		margin: 0;
-    border: 1px solid #282828;
 	}
 
 img {
@@ -268,7 +267,7 @@ hr.divider {
 
 #footer-wrapper {
 		flex-direction: column;
-		margin-top: 50px;
+		margin: 0;
 }
 
 #footer-p {
@@ -335,6 +334,7 @@ hr.divider {
 
 .portfolio-column .content-wrapper {
     width: 100%;
+    margin: 0;
 }
 
 .portfolio-column h4 {
@@ -470,23 +470,6 @@ hr.divider {
 			width: 100%;
 	}
 
-<<<<<<< HEAD
-/* Portfolio section */
-  #portfolio-row {
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .portfolio-column {
-      width: 40%;
-      margin-top: 0;
-      padding-bottom: 50px;
-  }
-
-  .portfolio-column .content-wrapper {
-      margin: 0;
-  }
-=======
 /* Section-three */
   #portfolio-row {
     justify-content: space-between;
@@ -495,7 +478,6 @@ hr.divider {
  .portfolio-column {
       width: 40%;
     }
->>>>>>> gh-pages
 }
 
 @media all and (min-width:1025px) {
@@ -532,14 +514,6 @@ hr.divider {
 @media all and (min-width:1201px) {
 
 }
-<<<<<<< HEAD
-
-
-}
-
-
-=======
->>>>>>> gh-pages
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),
